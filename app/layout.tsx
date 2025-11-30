@@ -1,20 +1,28 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
 
+const inter = Inter({ subsets: ['latin'] })
+
 export const metadata: Metadata = {
-  title: 'Isa Martini | Nutrition Expert & Author',
-  description: 'Transform your health with expert nutrition guidance from Isa Martini. Discover books, resources, and personalized nutrition advice.',
-  keywords: 'nutrition, health, wellness, weight loss, weight gain, nutrition books, Isa Martini',
-  authors: [{ name: 'Isa Martini' }],
+  title: 'Test Isa Martini - Professional Solutions',
+  description: 'Discover innovative solutions tailored to your needs. Transform your business with our expert services and cutting-edge technology.',
+  keywords: 'business solutions, professional services, innovation, technology',
+  authors: [{ name: 'Test Isa Martini' }],
   openGraph: {
-    title: 'Isa Martini | Nutrition Expert & Author',
-    description: 'Transform your health with expert nutrition guidance from Isa Martini.',
+    title: 'Test Isa Martini - Professional Solutions',
+    description: 'Discover innovative solutions tailored to your needs.',
     type: 'website',
+    locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Isa Martini | Nutrition Expert & Author',
-    description: 'Transform your health with expert nutrition guidance from Isa Martini.',
+    title: 'Test Isa Martini - Professional Solutions',
+    description: 'Discover innovative solutions tailored to your needs.',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 }
 
@@ -24,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }
